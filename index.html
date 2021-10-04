@@ -1,33 +1,34 @@
 ---
 layout: default
 ---
+<div class="top">
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="assets/images/case/case2.png" alt="事例2全体像"></div>
+      <div class="swiper-slide"><img src="assets/images/case/case1.png" alt="事例1全体像"></div>
+      <div class="swiper-slide"><img src="assets/images/case/case3.png" alt="事例3全体像"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="assets/images/case/case2.png" alt="事例2全体像"></div>
-    <div class="swiper-slide"><img src="assets/images/case/case1.png" alt="事例1全体像"></div>
-    <div class="swiper-slide"><img src="assets/images/case/case3.png" alt="事例3全体像"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <!-- <div class="swiper-scrollbar"></div> -->
 </div>
 
 <script>
   const swiper = new Swiper('.swiper', {
     // Optional parameters
-    effect: 'slide',
+    effect: 'fade',
     loop: true,
-    speed: 600,
+    speed: 2000,
 
     autoplay: {
       delay: 5000,
