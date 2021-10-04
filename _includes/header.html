@@ -12,7 +12,15 @@
 </header>
 
 <script>
-  $('#menu-bar').click(function() {
-    $('#menu').fadeToggle(400)
-  })
+  $(document).on('click', function(e) {
+  if(!$(e.target).closest('#menu').length && !$(e.target).closest('#menu-bar').length){
+    $('#menu').fadeOut();
+  }else if($(e.target).closest('#menu-bar').length){
+    if($('#menu').is(':hidden')){
+      $('#menu').fadeIn();
+    }else{
+      $('#menu').fadeOut();
+    }
+  }
+});
 </script>
