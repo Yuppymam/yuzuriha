@@ -2,24 +2,60 @@
 layout: default
 ---
 <div class="top">
-  <!-- Slider main container -->
-  <div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide"><img src="assets/images/case/case2.png" alt="事例2全体像"></div>
-      <div class="swiper-slide"><img src="assets/images/case/case1.png" alt="事例1全体像"></div>
-      <div class="swiper-slide"><img src="assets/images/case/case3.png" alt="事例3全体像"></div>
+
+  <div class="top-slide">
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="assets/images/case/case2.png" alt="事例2全体像"></div>
+        <div class="swiper-slide"><img src="assets/images/case/case1.png" alt="事例1全体像"></div>
+        <div class="swiper-slide"><img src="assets/images/case/case3.png" alt="事例3全体像"></div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+    <div class="sub-description pc-only">
+      {% include sub-description.html %}
+    </div>
+  </div>
 
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+  <h2 class="description center">外構・エクステリア デザイン図<br>
+    RIKCADにて制作代行いたします。</h2>
 
-    <!-- If we need scrollbar -->
-    <!-- <div class="swiper-scrollbar"></div> -->
+  <div class="sub-description mobile-only">
+    {% include sub-description.html %}
+  </div>
+
+  <h3 class="center">外構施工店様・工務店様・ハウスメーカー様など業者様向けに、RIKCADを使用し下記を制作しております。</h3>
+
+  <div class="can-do-boxes">
+    <div class="can-do-box">
+      <div class="can-do-title">外構・エクステリア作図代行</div>
+      <div class="can-do-img">
+        <img src="assets/images/plan/plan-a.png" alt="プランAイメージ">
+      </div>
+    </div>
+    <div class="can-do-box">
+      <div class="can-do-title">建物イメージパース図代行</div>
+      <div class="can-do-img">
+        <img src="assets/images/plan/plan-b.png" alt="プランBイメージ">
+      </div>
+    </div>
+    <div class="can-do-box">
+      <div class="can-do-title">外構・エクステリアプランニング</div>
+      <div class="can-do-img">
+        <img src="assets/images/plan/plan-c.png" alt="プランCイメージ">
+      </div>
+    </div>
   </div>
 </div>
 

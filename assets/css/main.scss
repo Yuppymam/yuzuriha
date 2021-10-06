@@ -1,18 +1,30 @@
 ---
 ---
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family:
     'YuMincho',    /* Mac用 */
     'Yu Mincho', /* Windows用 */
     serif;
+    color: #443624;
 }
 .english-fonts {
   font-size: 1.1em;
 }
 .contents {
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 160px;
   margin: 0 4%;
+}
+.center {
+  text-align: center;
+}
+.page-title {
+  font-size: 2em;
+  margin: 5% 0;
 }
 
 // header
@@ -126,8 +138,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: fixed;
-  bottom: 0;
   height: 160px;
   width: 100%;
   background-color: #c4c4c4;
@@ -194,4 +204,68 @@ body {
   .swiper-button-next:after {
     font-size: 1.2em;
   }
+}
+
+// topページ
+.top-slide {
+  position: relative;
+  margin-bottom: 5%;
+}
+.description {
+  margin: 4% 0;
+  line-height: 1.5;
+  font-size: 1.6em;
+  @media (max-width: 800px) {
+    font-size: 1.15em;
+  }
+}
+.sub-description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  width: calc(100% / 3);
+  background-color: rgba(55,145,144,0.85);
+  padding: 3% 1%;
+  z-index: 1;
+  p {
+    line-height: 1.4;
+  }
+}
+@media (max-width: 800px) {
+  .sub-description.pc-only {
+    display: none;
+  }
+}
+.sub-description.mobile-only {
+  position: static;
+  width: 100%;
+  color: #0A7E8C;
+  font-size: 0.9em;
+  background-color: #c7dbe7;
+  margin: 5% 0;
+  padding: 5% 0;
+  line-height: 1.5;
+}
+
+.can-do-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin: 5% 0;
+}
+.can-do-box {
+  width: 30%;
+  box-shadow: 1px 5px 8px #c4c4c4;
+  box-sizing: border-box;
+}
+.can-do-img img {
+  width: 100%;
+  padding: 3%;
+}
+.can-do-title {
+  color: #0a7e8c;
+  background-color: #c7dbe7;
+  text-align: center;
+  padding: 8% 3%;
 }
