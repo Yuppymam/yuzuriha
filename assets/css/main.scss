@@ -26,6 +26,21 @@ body {
   font-size: 2em;
   margin: 5% 0;
 }
+button {
+  background-color: #379190;
+  color: #fff;
+  padding: 0.7em 2.6em;
+  i {
+    margin-left: 0.5em;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+  @media (max-width: 800px) {
+    font-size: 0.9em;
+    padding: 0.7em 2em;
+  }
+}
 
 // header
 .header {
@@ -219,7 +234,7 @@ body {
     font-size: 1.4em;
   }
   @media (max-width: 670px) {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 }
 .sub-description {
@@ -286,7 +301,6 @@ body {
   background-color: #c7dbe7;
   text-align: center;
   padding: 8% 3%;
-  font-size: 1.8vh;
 }
 
 @media (max-width: 800px) {
@@ -294,6 +308,7 @@ body {
     text-align-last: left;
     padding: 4%;
     line-height: 1.4;
+    font-size: 0.9em;
   }
   .can-do-boxes {
     flex-direction: column;
@@ -302,6 +317,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    border: #c7dbe7 1px solid;
     padding: 0 4%;
     margin: 2% 0;
     align-items: center;
@@ -313,11 +329,24 @@ body {
     padding: 0;
     text-align: left;
     width: 60%;
+    line-height: 1.4;
     p {
       align-self: center;
     }
   }
   .can-do-img {
     width: 40%;
+  }
+}
+
+.design-description {
+  margin: 3em 0;
+  p {
+    color: #0a7e8c;
+    line-height: 1.4;
+    text-align: center;
+    @media (max-width: 670px) {
+      font-size: 0.9em;
+    }
   }
 }
