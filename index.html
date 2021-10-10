@@ -58,12 +58,50 @@ layout: default
     </div>
   </div>
 
-  <div class="center">
-    <button>プラン詳細を見る<i class="fas fa-chevron-right"></i></button>
+  <div class="button center">
+    <a href="{{site.baseurl}}/plan">プラン詳細を見る<i class="fas fa-chevron-right"></i></a>
   </div>
 
-  <div class="design-description">
+  <div class="design-description center">
     <p>お客様の環境やライフスタイルに合わせて、<br>お客様の想像を越えるデザインを<br>ご提案致します。</p>
+    <small>HP上の作図は全てオリジナルデザインです。</small>
+  </div>
+
+  <div class="top-gallery-images">
+    <div class="top-gallery-image fade">
+      <img src="assets/images/european.png" alt="ヨーロピアンスタイルのお庭">
+    </div>
+    <div class="top-gallery-image fade right">
+      <img src="assets/images/japanese.png" alt="和風のお庭">
+    </div>
+    <div class="top-gallery-image fade">
+      <img src="assets/images/asian.png" alt="アジアンリゾートなお庭">
+    </div>
+    <div class="top-gallery-image fade right">
+      <img src="assets/images/universal.png" alt="ユニバーサルデザインの外構">
+    </div>
+    <div class="day-and-night fade">
+      <div class="top-gallery-image left">
+        <img src="assets/images/day-style.png" alt="Dayスタイル">
+      </div>
+      <div class="top-gallery-image right">
+        <img src="assets/images/night-style.png" alt="Nightスタイル">
+      </div>
+    </div>
+  </div>
+
+  <div class="button reversal center">
+    <a href="{{site.baseurl}}/gallery">他の画像も見る<i class="fas fa-chevron-right"></i></a>
+  </div>
+
+  <div class="top-bottom-pr">
+    <p>お客様が満足するお庭を「設計」から寄り添ってサポートいたします。</p>
+    <br>
+    <p>まずはお気軽にお問い合わせください。</p>
+  </div>
+
+  <div class="button center">
+    <a href="{{site.baseurl}}/contact">お問い合わせ<i class="fas fa-chevron-right"></i></a>
   </div>
 
 </div>
@@ -92,4 +130,20 @@ layout: default
       prevEl: '.swiper-button-prev',
     },
   });
+</script>
+
+<script>
+  // fade
+  $(function() {
+    $(window).scroll(function () {
+      $('.fade').each(function () {
+        const target = $(this).offset().top
+        const scroll = $(window).scrollTop()
+        const windowHeight = $(window).height()
+        if (scroll > target - windowHeight) {
+          $(this).addClass('view')
+        }
+      })
+    })
+  })
 </script>

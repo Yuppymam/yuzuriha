@@ -16,7 +16,7 @@ body {
 .contents {
   flex-grow: 1;
   padding-top: 20px;
-  padding-bottom: 160px;
+  padding-bottom: 100px;
   margin: 0 4%;
 }
 .center {
@@ -26,7 +26,12 @@ body {
   font-size: 2em;
   margin: 5% 0;
 }
-button {
+.button {
+  margin: 2em 0;
+  box-sizing: border-box;
+}
+.button a {
+  display: inline-block;
   background-color: #379190;
   color: #fff;
   padding: 0.7em 2.6em;
@@ -40,6 +45,23 @@ button {
     font-size: 0.9em;
     padding: 0.7em 2em;
   }
+}
+.button.reversal a{
+  background-color: #fff;
+  color: #379190;
+  border: #379190 1px solid;
+  &:hover {
+    background-color: rgba(199,219,231,0.54);
+  }
+}
+
+// fade
+.fade {
+  opacity : 0;
+  transition: opacity 1.8s;
+}
+.fade.view {
+  opacity: 1;
 }
 
 // header
@@ -302,8 +324,52 @@ button {
   text-align: center;
   padding: 8% 3%;
 }
+.design-description {
+  margin: 3em 0;
+  p {
+    font-size: 1.2em;
+    color: #0a7e8c;
+    line-height: 1.4;
+    text-align: center;
+    @media (max-width: 670px) {
+      font-size: 0.9em;
+    }
+  }
+  small {
+    display: block;
+    margin: 1em 0;
+  }
+}
+.top-gallery-images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.top-gallery-image {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+.top-gallery-image img {
+  width: 100%;
+}
+.day-and-night {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 ;
+  .top-gallery-image {
+    width: 38%;
+  }
+}
+.top-bottom-pr {
+  text-align: center;
+  margin: 3em 0;
+}
 
 @media (max-width: 800px) {
+  .contents {
+    padding-bottom: 60px;
+  }
   .can-do-description {
     text-align-last: left;
     padding: 4%;
@@ -339,14 +405,39 @@ button {
   }
 }
 
-.design-description {
-  margin: 3em 0;
-  p {
-    color: #0a7e8c;
-    line-height: 1.4;
-    text-align: center;
-    @media (max-width: 670px) {
-      font-size: 0.9em;
+@media (max-width: 600px) {
+  .footer-nav ul a {
+    padding: 0.8em 0.6em;
+  }
+  .top-gallery-image {
+    width: 85%;
+  }
+  .day-and-night {
+    display: block;
+    position: relative;
+    margin-top: 4em;
+    .top-gallery-image {
+      width: 60%;
     }
+    .top-gallery-image.left,
+    .top-gallery-image.right {
+      display: block;
+      width: 100%;
+      img {
+        width: 60%;
+        box-shadow: 1px 5px 8px #c4c4c4;
+      }
+    }
+    .top-gallery-image.left {
+      position: absolute;
+      top: -30%;
+    }
+    .top-gallery-image.right {
+      text-align: right;
+    }
+  }
+  .top-bottom-pr {
+    font-size: 0.9em;
+    margin: 3em 1em;
   }
 }
