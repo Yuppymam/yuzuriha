@@ -38,7 +38,6 @@ body {
   display: inline-block;
   background-color: #379190;
   color: #fff;
-  font-weight: bold;
   padding: 0.7em 2.6em;
   i {
     margin-left: 0.5em;
@@ -297,17 +296,15 @@ body {
   color: #0a7e8c;
   background-color: #c7dbe7;
   text-align: center;
-  font-weight: bold;
   padding: 8% 3%;
 }
 .design-description {
   margin: 3em 0;
   p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #0a7e8c;
     line-height: 1.4;
     text-align: center;
-    font-weight: bold;
     @media (max-width: 670px) {
       font-size: 1em;
     }
@@ -683,8 +680,11 @@ body {
   }
   .plan.can-do-box {
     margin: 1.4em 0;
-    .can-do-title span {
-      font-size: 1.8em;
+    .can-do-title {
+      font-weight: bold;
+      span {
+        font-size: 1.8em;
+      }
     }
     .can-do-title.mobile-only {
       padding: 1em 0;
