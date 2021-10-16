@@ -36,7 +36,7 @@ title: Gallery
     </div>
   </div>
 
-  <div class="case-section even-number">
+  <div class="case-section even-number fade">
     <div class="case-number">Case 2</div>
     <h2>「四角」を基調に「和」を取り入れた癒しの空間へ。</h2>
     <div class="swiper slider slider2">
@@ -63,7 +63,7 @@ title: Gallery
     </div>
   </div>
 
-  <div class="case-section">
+  <div class="case-section fade">
     <div class="case-number">Case 3</div>
     <h2>建物の重厚感はそのままに。こだわりの植物で彩りをプラス。</h2>
     <div class="swiper slider slider3">
@@ -88,7 +88,7 @@ title: Gallery
     </div>
   </div>
 
-  <div class="case-section even-number">
+  <div class="case-section even-number fade">
     <div class="case-number">Others</div>
     <h2>多様なスタイルに合わせて、心を込めて設計・デザインいたします。</h2>
     <div class="swiper slider slider4">
@@ -210,4 +210,18 @@ title: Gallery
   Thumbnail4.on('slideChange', () => {
     mainSlider4.slideToLoop(Thumbnail4.realIndex);
   });
+
+  // fade
+  $(function() {
+    $(window).scroll(function () {
+      $('.fade').each(function () {
+        const target = $(this).offset().top
+        const scroll = $(window).scrollTop()
+        const windowHeight = $(window).height()
+        if (scroll > target - windowHeight) {
+          $(this).addClass('view')
+        }
+      })
+    })
+  })
 </script>
