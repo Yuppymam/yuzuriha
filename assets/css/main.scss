@@ -34,6 +34,7 @@ body {
   margin: 2em 0;
   box-sizing: border-box;
 }
+.button button,
 .button a {
   display: inline-block;
   background-color: #379190;
@@ -49,6 +50,9 @@ body {
     font-size: 0.9em;
     padding: 0.7em 2em;
   }
+}
+#contact-form-button {
+  padding: 0.7em 4em;
 }
 .button.reversal a{
   background-color: #fff;
@@ -827,5 +831,90 @@ body {
     .swiper.thumbnail3 {
       padding: 0;
     }
+  }
+}
+
+// お問い合わせフォーム
+.form-wrap {
+  width: 680px;
+  padding: 3em 6em 1em;
+  margin: 3em auto;
+  border: #63a494 1px solid;
+}
+#contact-form {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-family: "MS Pゴシック", sans-serif;
+    border: #379190 1px solid;
+    padding: 0.2em;
+    font-size: 1em;
+    margin: 0.1em 0 1.5em;
+    width: 100%;
+    outline: none;
+    line-height: 1.5;
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    input {
+      margin-right: 0.3em;
+    }
+  }
+  input:focus,
+  textarea:focus {
+    border: #0a7e8c 2px solid;
+    background-color: rgba(199,219,231,0.54)
+  }
+  label.required::before {
+    display: inline-block;
+    margin-right: 1em;
+    padding: 0.3em 2em;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #379190;
+    content: "必須";
+  }
+  label.optional::before {
+    display: inline-block;
+    margin-right: 1em;
+    padding: 0.3em 2em;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #7d7373;
+    content: "任意";
+  }
+  .interest-checks {
+    margin-bottom: 1.5em;
+    p {
+      margin-bottom: 0.4em;
+    }
+  }
+  .interest-check {
+    margin-left: 0.2em;
+  }
+  .policy {
+    margin: 1em 0;
+  }
+  .policy-check {
+    justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .form-wrap {
+    width: 90%;
+    padding: 3em 3em 1em;
+  }
+}
+@media (max-width: 480px) {
+  .form-wrap {
+    width: 100%;
+    padding: 2em 1em 1em;
+    margin-top: 0;
+  }
+  #contact-form label.required::before,
+  #contact-form label.optional::before {
+    padding: 0.3em 1em;
   }
 }
