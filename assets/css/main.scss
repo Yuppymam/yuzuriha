@@ -896,6 +896,12 @@ body {
   }
   .policy {
     margin: 1em 0;
+    a {
+      color: #0a7e8c;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
   .policy-check {
     justify-content: center;
@@ -916,5 +922,28 @@ body {
   #contact-form label.required::before,
   #contact-form label.optional::before {
     padding: 0.3em 1em;
+  }
+}
+
+// プライバシーポリシー
+.policy-wrap {
+  width: 70%;
+  max-width: 980px;
+  margin: 3em auto;
+  line-height: 1.4;
+  .policy-title {
+    text-decoration: underline;
+  }
+  p, ul {
+    margin: 1em 0;
+  }
+  .policy-nest-ul {
+    margin-left: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .policy-wrap {
+    width: 90%;
+    font-size: 0.9em;
   }
 }
