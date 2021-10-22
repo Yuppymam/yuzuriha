@@ -63,7 +63,7 @@ body {
   }
 }
 .pr-text {
-  margin: 2em 0;
+  margin: 2em 3em;
   line-height: 1.4;
 }
 
@@ -471,8 +471,7 @@ body {
     }
   }
   .pr-text {
-    font-size: 0.9em;
-    margin: 3em 1em;
+    margin: 2em 1em;
     text-align: left;
     small {
       display: block;
@@ -936,6 +935,7 @@ body {
   line-height: 1.4;
   .policy-title {
     text-decoration: underline;
+    font-weight: bold;
   }
   p, ul {
     margin: 1em 0;
