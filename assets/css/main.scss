@@ -137,6 +137,11 @@ body {
     display: none;
   }
 }
+@media (max-width: 800px) {
+  .pc-only {
+    display: none;
+  }
+}
 
 // footer
 .footer {
@@ -147,6 +152,12 @@ body {
   width: 100%;
   background-color: #c4c4c4;
   color: #fff;
+  .sns-icon {
+    margin-bottom: 0.5em;
+    a:hover {
+      color: #c7dbe7;
+    }
+  }
 }
 .footer-nav {
   display: flex;
