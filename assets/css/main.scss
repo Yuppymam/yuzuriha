@@ -902,6 +902,9 @@ a.can-do-box:hover {
     width: 100%;
     outline: none;
     line-height: 1.5;
+    &::placeholder {
+      color: #c4c4c4;
+    }
   }
   .checkbox {
     display: flex;
