@@ -18,6 +18,10 @@
   </nav>
   <div class="center sns-icon"><a href="https://instagram.com/yuzuriha_garden"><i class="fab fa-instagram fa-2x"></i></a></div>
   <small class="copyright">
-    &copy;<script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> ゆずりは
+    &copy;<span id="current-year"></span> ゆずりは
   </small>
 </footer>
+
+<script>
+  document.getElementById("current-year").innerText = new Date().getFullYear();
+</script>
